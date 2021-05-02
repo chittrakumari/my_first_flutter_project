@@ -29,15 +29,16 @@ class Home extends StatelessWidget {
 
 
         body: Center(
-          child:RaisedButton.icon(
-            onPressed: (){},
-            icon: Icon(Icons.mail,
-            size: 60,),
-            color:Colors.amber,
-            label: Text('Mail me'),
-          )
-          ),
+          child: IconButton(
+    onPressed: (){
+      print('u clicked me');
+    },
+    icon: Icon(Icons.alternate_email,
+    size: 60.0),
+    color: Colors.amber,
 
+    ),
+        ),
 
 
 

@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -28,19 +29,15 @@ class Home extends StatelessWidget {
 
 
         body: Center(
-          child:FlatButton(
-            onPressed: (){
-              print('Stay Safe');
-
-            },
-            child: Text('Click Me',style: TextStyle(
-              fontSize: 40.0,
-              fontWeight: FontWeight.bold
-            )
-            ),
-            color: Colors.lightBlue,
+          child:RaisedButton.icon(
+            onPressed: (){},
+            icon: Icon(Icons.mail,
+            size: 60,),
+            color:Colors.amber,
+            label: Text('Mail me'),
           )
-        ),
+          ),
+
 
 
 

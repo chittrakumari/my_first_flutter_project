@@ -28,8 +28,17 @@ class Home extends StatelessWidget {
 
 
         body: Center(
-          child:Image(
-            image:AssetImage(''),
+          child:FlatButton(
+            onPressed: (){
+              print('Stay Safe');
+
+            },
+            child: Text('Click Me',style: TextStyle(
+              fontSize: 40.0,
+              fontWeight: FontWeight.bold
+            )
+            ),
+            color: Colors.lightBlue,
           )
         ),
 

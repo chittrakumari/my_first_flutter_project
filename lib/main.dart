@@ -29,7 +29,11 @@ class Home extends StatelessWidget {
 
         body:Container(
           //Padding is the inside in the container
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
+
+          //Marging is outside the container.
+    margin: EdgeInsets.all(30.0),
+
           color: Colors.amber,
           child: Text('Stay Safe',
           style: TextStyle(
@@ -39,6 +43,9 @@ class Home extends StatelessWidget {
           )
           ),
         ),
+
+
+
 
 
         floatingActionButton: FloatingActionButton(

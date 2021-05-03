@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -24,22 +23,22 @@ class Home extends StatelessWidget {
           ),
           centerTitle : true,
 
-          backgroundColor: Colors.red[600],
+          backgroundColor: Colors.blue[600],
         ),
 
 
-        body: Center(
-          child: IconButton(
-    onPressed: (){
-      print('u clicked me');
-    },
-    icon: Icon(Icons.alternate_email,
-    size: 60.0),
-    color: Colors.amber,
-
-    ),
+        body:Container(
+          //Padding is the inside in the container
+          padding: EdgeInsets.all(20.0),
+          color: Colors.amber,
+          child: Text('Stay Safe',
+          style: TextStyle(
+              fontSize: 50.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OrelegaOne',
+          )
+          ),
         ),
-
 
 
         floatingActionButton: FloatingActionButton(

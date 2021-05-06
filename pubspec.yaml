@@ -64,6 +64,10 @@ flutter:
     - family: OrelegaOne
       fonts:
          - asset: fonts/OrelegaOne-Regular.ttf
+    - family: NotoSansTC
+      fonts:
+          - asset: fonts/NotoSansTC-Bold.otf
+
 
 
   # For details regarding fonts from package dependencies,

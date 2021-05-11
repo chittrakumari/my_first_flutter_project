@@ -1,37 +1,67 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
-//Scaffold widget helps us to build the basic layout of our app .We can add the appbar,icons, buttons etc.
-void main()=>runApp(MaterialApp(
-  home:Scaffold(
-
-    appBar: AppBar(
-      title: Text(
-        'Hello!'
-      ),
-      centerTitle: true,
-backgroundColor: Colors.pink,
-    ),
+void main()=>runApp(
+  MaterialApp(
+    debugShowCheckedModeBanner: false,
+   home:Home()
+  ));
 
 
 
-    body: Center(
-          child:Text('Stay Safe Everyone',
-            style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2.0,
-                      color: Colors.blue[300],
-              fontFamily: 'NotoSansTC',
-                ),
-          ),
+class Home extends StatelessWidget {
+  @override
+
+  //This function is responsible for building the widget tree.
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Hello World',style: TextStyle(
+          fontFamily: 'NotoSansTC',
+          letterSpacing: 2.0,
+          fontSize: 30.0,
+          fontWeight: FontWeight.bold,
+
         ),
-    floatingActionButton: FloatingActionButton(
-      onPressed: (){
+        ),
+        centerTitle: true,
+      ),
 
-      },
-      child: Text('Click '),
-      backgroundColor: Colors.pink,
+
+      body:Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,  //used horizontally
+        crossAxisAlignment: CrossAxisAlignment.start, //used vertically
+        children: <Widget>[
+          Text('Wear Mask',
+              style: TextStyle(
+        fontSize: 20.0,
+      )
+          ),
+          FlatButton(
+            onPressed:(){},
+            color: Colors.pinkAccent,
+            child: Text('click me'),
+          ),
+
+       Container(
+    child:Text(
+    "Stay Safe",
+    style: TextStyle(
+      fontSize: 30.0,
     ),
-),
-)
-);
+    ),
+         padding: EdgeInsets.all(20.0),
+         color: Colors.amber,
+
+    )
+
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+    backgroundColor: Colors.blue,
+      child: Text('click me'),
+    ),
+    );
+
+  }
+}

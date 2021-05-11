@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
 void main()=>runApp(
@@ -5,6 +6,7 @@ void main()=>runApp(
     debugShowCheckedModeBanner: false,
    home:Home()
   ));
+
 
 
 
@@ -19,7 +21,7 @@ class Home extends StatelessWidget {
           'Hello World',style: TextStyle(
           fontFamily: 'NotoSansTC',
           letterSpacing: 2.0,
-          fontSize: 30.0,
+          fontSize: 40.0,
           fontWeight: FontWeight.bold,
 
         ),
@@ -27,46 +29,59 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
-//In columns the main axis alignment property is vertical and cross axis alignment property horizontal and in rows its vice versa we can nest a column inside a row and a row inside a column
+//Expanded widgets can epand a row or take up the space inside a container.
 
-      body:Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-Row(
+      body: Row(
   children: <Widget>[
-    Text('stay safe'
+Expanded(
+  flex:2,     //Expanded widgets can take images as well
+    child: Image.asset('assets/scenery.jpg')),
 
-    )
-  ],
 
-),
-          Container(
-            child:Text('one'),
-            color: Colors.pinkAccent,
-            padding: EdgeInsets.all(20.0),
+    
+
+
+
+          Expanded(
+            flex:3,  //if we want customize the space contained by the expanded widget we use flex.
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child:Text('1'),
+            ),
           ),
 
-          Container(
-            child:Text('two'),
-            color: Colors.amber,
-            padding: EdgeInsets.all(30.0),
+          Expanded(
+            flex:2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child:Text('2'),
+            ),
           ),
 
-          Container(
-            child:Text('three'),
-            color: Colors.deepOrange,
-            padding: EdgeInsets.all(40.0),
-          )
+          Expanded(
+            flex: 1,
+            child: Container(
+      padding: EdgeInsets.all(30.0),
+      color: Colors.deepOrange,
+      child:Text('3'),
+    ),
+          ),
+
+
         ],
-      ),
+),
+
 
       floatingActionButton: FloatingActionButton(
     backgroundColor: Colors.blue,
       child: Text('click',
       ),
-    ),
+    )
+
     );
+
 
   }
 }

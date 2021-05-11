@@ -27,39 +27,44 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
+//In columns the main axis alignment property is vertical and cross axis alignment property horizontal and in rows its vice versa we can nest a column inside a row and a row inside a column
 
-      body:Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,  //used horizontally
-        crossAxisAlignment: CrossAxisAlignment.start, //used vertically
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text('Wear Mask',
-              style: TextStyle(
-        fontSize: 20.0,
-      )
-          ),
-          FlatButton(
-            onPressed:(){},
-            color: Colors.pinkAccent,
-            child: Text('click me'),
-          ),
-
-       Container(
-    child:Text(
-    "Stay Safe",
-    style: TextStyle(
-      fontSize: 30.0,
-    ),
-    ),
-         padding: EdgeInsets.all(20.0),
-         color: Colors.amber,
+Row(
+  children: <Widget>[
+    Text('stay safe'
 
     )
+  ],
 
+),
+          Container(
+            child:Text('one'),
+            color: Colors.pinkAccent,
+            padding: EdgeInsets.all(20.0),
+          ),
+
+          Container(
+            child:Text('two'),
+            color: Colors.amber,
+            padding: EdgeInsets.all(30.0),
+          ),
+
+          Container(
+            child:Text('three'),
+            color: Colors.deepOrange,
+            padding: EdgeInsets.all(40.0),
+          )
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
     backgroundColor: Colors.blue,
-      child: Text('click me'),
+      child: Text('click',
+      ),
     ),
     );
 
